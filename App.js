@@ -21,7 +21,7 @@ export default function App() {
   }
 
   const dollar_real = () => {
-    let result = parseFloat(valor)/ 5.41
+    let result = parseFloat(valor)* 5.41
     setResultado("R$ " + result.toFixed(2))
   }
 
