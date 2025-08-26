@@ -27,15 +27,15 @@ export default function App() {
   return (
     <KeyboardAvoidingView behavior='padding' style={estilo.container}>
        <LinearGradient
-      colors={['#49225B', '#6E3482', '#A56ABD', '#E7DBEF', '#F5EBFA']}
+      colors={['#F5EBFA', '#E7DBEF', '#A56ABD', '#6E3482', '#49225B']}
       style={estilo.container}
     >
-      <Text style={estilo.titulo_png}>Conversor</Text>
+      <Text style={estilo.titulo}>Conversor 2.0</Text>
       <Image 
         source={require('./assets/logo1.png')} 
         style={{ width: 300, height: 300 }}
       />
-      <Text style={estilo.titulo}>Informe um valor:</Text>
+      <Text style={estilo.titulo_png}>Informe um valor:</Text>
       <TextInput 
       placeholder='Digite aqui' 
       autoCapitalize='words' 
@@ -58,7 +58,7 @@ export default function App() {
        <Text style={estilo.textoBotao}>Dolar - Real</Text>
         </TouchableOpacity>
 
-       <Text style={estilo.titulo}>O resultado é: {resultado}</Text>
+       <Text style={estilo.titulo_png}>O resultado é: {resultado}</Text>
        </LinearGradient>
     </KeyboardAvoidingView>
   );
@@ -73,7 +73,7 @@ const estilo = StyleSheet.create({
   },
   titulo: {
     fontSize: 22, 
-    color: '#49225B', // tom roxo escuro para destaque
+    color: '#49225B', 
     fontWeight: '700',
     marginTop: 20,
     marginBottom: 15,
@@ -98,8 +98,6 @@ const estilo = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     color: '#49225B',
-    elevation: 3, // sombra leve Android
-    shadowColor: '#000', // sombra leve iOS
     shadowOpacity: 0.1,
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 4,
@@ -112,8 +110,6 @@ const estilo = StyleSheet.create({
     marginTop: 12,
     width: '80%',
     alignItems: 'center',
-    elevation: 3, // sombra no Android
-    shadowColor: '#000', // sombra no iOS
     shadowOpacity: 0.15,
     shadowOffset: { width: 0, height: 3 },
     shadowRadius: 5,
@@ -124,8 +120,12 @@ const estilo = StyleSheet.create({
     fontWeight: '600',
   },
   titulo_png: {
-    color: '#ffffff',
-    fontSize: 16,
+    fontSize: 22, 
+    color: '#ffffff', 
+    fontWeight: '700',
+    marginTop: 20,
+    marginBottom: 15,
+    textAlign: 'center',
   }
 });
 
