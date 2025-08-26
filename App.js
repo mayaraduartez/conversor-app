@@ -2,26 +2,26 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react'
 import { StyleSheet, Text, View, Image, TextInput, KeyboardAvoidingView, Button,  Pressable, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { use } from 'react/cjs/react.development';
 
 
 export default function App() {
   const [valor, setValor] = useState(0)
-  const [ct_dollar, setCt_dollar] = useState(0)
-  let resultado = '';
+  const [resultado, setResultado] = use('');
   const metros_centi = () => {
-     resultado = parseFloat(valor) * 100;
+     setResultado(parseFloat(valor) * 100)
   }
 
   const km_metros = () => {
-     resultado = parseFloat(valor) * 100;
+    setResultado(parseFloat(valor) * 100)
   }
 
   const c_f = () => {
-    resultado = (parseFloat(valor) * 9/5) + 32;
+    setResultado((parseFloat(valor) * 1.8) + 32)
   }
 
   const dollar_real = () => {
-    resultado = parseFloat(valor)/ 5.41
+    setResultado(parseFloat(valor)/ 5.41)
   }
 
   return (
