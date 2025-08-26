@@ -7,7 +7,7 @@ import { use } from 'react/cjs/react.development';
 
 export default function App() {
   const [valor, setValor] = useState(0)
-  const [resultado, setResultado] = use('');
+  const [resultado, setResultado] = useState('');
   const metros_centi = () => {
      setResultado(parseFloat(valor) * 100)
   }
